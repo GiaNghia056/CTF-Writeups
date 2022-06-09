@@ -52,4 +52,7 @@ Hooray!!
   \_/   \_/   \_/   \_/   \_/   \_/   \_/   \_/   \_/   \_/   \_/ 
 ```
 </br>
-Flag:`picoCTF{f0r3ns1c4t0r_n0v1c3_69ab1dc8}`
+Flag: 
+`
+picoCTF{f0r3ns1c4t0r_n0v1c3_69ab1dc8}
+`
