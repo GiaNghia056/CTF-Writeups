@@ -30,7 +30,9 @@ Therefore, I use `fls -r` to find the 'down-at-the-bottom.txt'
 fls -r dds2-alpine.flag.img -o 2048 | grep 'down-at-the-bottom.txt'
 ```
 and get this
-```+ r/r 18291:	down-at-the-bottom.txt```
+```
++ r/r 18291:	down-at-the-bottom.txt
+```
 </br>
 Use `icat` to cat the data at offset `18291`</br>
 ```
@@ -52,5 +54,4 @@ Hooray!!
   \_/   \_/   \_/   \_/   \_/   \_/   \_/   \_/   \_/   \_/   \_/ 
 ```
 </br>
-Flag: 
-##picoCTF{f0r3ns1c4t0r_n0v1c3_69ab1dc8}
+Flag: picoCTF{f0r3ns1c4t0r_n0v1c3_69ab1dc8}
