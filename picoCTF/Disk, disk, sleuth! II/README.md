@@ -32,8 +32,10 @@ fls -r dds2-alpine.flag.img -o 2048 | grep 'down-at-the-bottom.txt'
 and get this
 ```+ r/r 18291:	down-at-the-bottom.txt```
 </br>
-Use `icat` to cat the data at offset `18291`
-```icat dds2-alpine.flag.img -o 2048 18291```
+Use `icat` to cat the data at offset `18291`</br>
+```
+icat dds2-alpine.flag.img -o 2048 18291
+```
 Hooray!!
 ```
    _     _     _     _     _     _     _     _     _     _     _     _     _  
