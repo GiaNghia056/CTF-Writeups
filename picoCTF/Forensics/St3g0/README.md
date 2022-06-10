@@ -4,7 +4,7 @@ AUTHOR: th3_bl1nd3r
 
 ## Description
 Download this image and find the flag.</br>
-Mark up : - Download image
+Markup : - [Download image](https://artifacts.picoctf.net/c/423/pico.flag.png)</br>
 ## Solution
 I search Google about `$t3g0` and found this [LSB Image Steganography](https://medium.com/swlh/lsb-image-steganography-using-python-2bbbee2c69a2)</br>
 
