@@ -13,9 +13,9 @@ for i in range(1000,-1,-1):
 	tar = tarfile.open(filename)
 	tar.extractall()
 	tar.close()
-```bash
-Another way is using Linux Bash script
 ```
+Another way is using Linux Bash script
+```bash
 for i in {1000..1}; do tar -xf $i.tar; done
 ```
 Then, I got this
