@@ -1,4 +1,4 @@
-# like1000!
+# like1000
 Category: Forensics </br>
 AUTHOR: th3_bl1nd3r
 
@@ -13,7 +13,7 @@ for i in range(1000,-1,-1):
 	tar = tarfile.open(filename)
 	tar.extractall()
 	tar.close()
-```
+```bash
 Another way is using Linux Bash script
 ```
 for i in {1000..1}; do tar -xf $i.tar; done
