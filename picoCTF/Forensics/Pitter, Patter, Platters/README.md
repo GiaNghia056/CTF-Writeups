@@ -7,11 +7,12 @@ AUTHOR: th3_bl1nd3r
 ## Solution
 Use [Autospy](https://www.autopsy.com/) and you will get this
 ![Autospy GUI](https://github.com/GiaNghia056/CTF-Writeups/blob/main/picoCTF/Forensics/Pitter%2C%20Patter%2C%20Platters/Screenshot1.png)
-Use srch_strings
-```
-srch_strings dds1-alpine.flag.img | grep picoCTF
-```
-Then, I got this
-`  SAY picoCTF{f0r3ns1c4t0r_n30phyt3_ad5c96c0}`</br>
+If you don't see the "-slack" file, do this first [view slack file in Autospy](https://security.stackexchange.com/questions/139479/uncover-data-in-file-slack)</br>
 
-Flag:`picoCTF{f0r3ns1c4t0r_n30phyt3_ad5c96c0}`
+Click on `suspicious-file.txt` and I saw this
+```
+}61d907ec_3<_|Lm_111t5_3b{FTCocip
+```
+Reverse it and we got the flag!
+
+Flag:`picoCTF{b3_5t111_mL|_<3_ce709d16}`
