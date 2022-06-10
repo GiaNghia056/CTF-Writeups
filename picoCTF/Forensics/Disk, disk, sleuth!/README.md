@@ -1,4 +1,4 @@
-# Disk,disk,sleuth! II
+# Disk,disk,sleuth!
 Category: Forensics </br>
 AUTHOR: th3_bl1nd3r
 
