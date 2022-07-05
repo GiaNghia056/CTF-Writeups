@@ -720,4 +720,6 @@ abcdefghijklmnopqrstuvwxyz{CTF0137}_abcdefghijklmnopqrstuvwxyz{CTF0137}_abcdefgh
 Sau đó ở phần cuối thì mình thấy có 21 `END OF CENTRAL DIRECTORY` của file zip (mời bạn đọc thêm ở [đây](https://i.imgur.com/BXuOFqT.jpg) và [APPNOTE.TXT](https://pkware.cachefly.net/webdocs/casestudies/APPNOTE.TXT)) nghĩa là thật sự sẽ chỉ có 21 file zip có đầy đủ cấu trúc, trừ đi 2 file `hello.txt` và `hi.txt` thì còn 19 file nghĩa là trong các file có tên bắt đầu bằng `flag` thì sẽ có 19 file là chứa các chữ cái để ghép thành flag hoàn chỉnh.<br/>
 
 Để ý ở trong mỗi `END OF CENTRAL DIRECTORY` sẽ có địa chỉ offset bắt đầu của `CENTRAL DIRECTORY`, từ đó có thể xác định được file có chứa các kí tự của flag.<br/>
+![EOCD](https://user-images.githubusercontent.com/88471003/177375280-5fcc28c6-efc9-4418-a390-34caee5e6529.png)
+
 Ví dụ:
