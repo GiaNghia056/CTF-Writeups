@@ -14,9 +14,8 @@ There's more to it than meets the eye...
 ```
 Có vẻ như là ngoài file `hello.txt` thì còn các file khác đang được giấu đi và có thể nó sẽ chứa flag. Mình thử dùng `binwalk` file `dump.zip` thì được kết quả
 
-<details>
-   <summary>Xem đầy đủ tại đây</summary>
-```DECIMAL       HEXADECIMAL     DESCRIPTION
+```r
+DECIMAL       HEXADECIMAL     DESCRIPTION
 --------------------------------------------------------------------------------
 0             0x0             Zip archive data, v0.0 compressed size: 41, uncompressed size: 41, name: hello.txt
 135           0x87            Zip archive data, v0.0 compressed size: 33, uncompressed size: 33, name: hi.txt
@@ -706,9 +705,7 @@ Có vẻ như là ngoài file `hello.txt` thì còn các file khác đang đư�
 61043         0xEE73          Zip archive data, v0.0 compressed size: 1, uncompressed size: 1, name: flag18
 61572         0xF084          End of Zip archive, footer length: 22
 ```
-</details>
-
-I figured the `root` directory would be a good starting point. `root` has control to everything and CTFs store important things in places with admin permissions. `fls -o 2048 dds2-alpine.flag.img 18290`:
+Nhận xét : Các file có chữ flag được đánh số từ 0 đến 18. Có thể flag sẽ ở 1 trong những file này hoặc sẽ được ghép từ các file này<br/>
 
 ```text
 r/r 18291:      down-at-the-bottom.txt
