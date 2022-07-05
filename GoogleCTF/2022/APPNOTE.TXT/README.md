@@ -7,23 +7,9 @@ Every single archive manager unpacks this to a different file...<br/>
 
 ## Approach
 
-Đầu tiên, unzip file 'dump.zip', thì nhận được 1 file 'hello.txt' chứa nội dung
-'''There's more to it than meets the eye...'''
+Đầu tiên, unzip file `dump.zip`, thì nhận được 1 file `hello.txt` chứa nội dung
 
-After the file is unzipped, the [image file](https://srv-store1.gofile.io/download/OqFIZV/cdbb01f6ece33855c5e24d3ca48581ed/dds2-alpine.flag.img) should be visible.
-
-`mmls dds2-alpine.flag.img` returned details about the disc image:
-
-```text
-DOS Partition Table
-Offset Sector: 0
-Units are in 512-byte sectors
-
-      Slot      Start        End          Length       Description
-000:  Meta      0000000000   0000000000   0000000001   Primary Table (#0)
-001:  -------   0000000000   0000002047   0000002048   Unallocated
-002:  000:000   0000002048   0000262143   0000260096   Linux (0x83)
-```
+```There's more to it than meets the eye...```
 
 By the way, [this video](https://www.youtube.com/watch?v=ld9RW3pxAKg) gives a really good overview on how to use The Sleuth Kit.
 
