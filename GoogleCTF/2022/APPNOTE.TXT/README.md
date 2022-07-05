@@ -1,10 +1,21 @@
-## collapsible markdown?
+# APPNOTE.TXT
 
-<details><summary>CLICK ME</summary>
+## Mô tả
+
+Every single archive manager unpacks this to a different file...<br/>
+[&darr;Attachment](https://storage.googleapis.com/gctf-2022-attachments-project/2551253642bde3066e55c9cc8e9b0b4aa77feadc00c81032da778e6f7c89907135dfc2611fd8617204720dbfadb31429ae11f6ecd202887f4ce99f2f53a3c5e8)
+
+## Tiếp cận
+
+Đầu tiên, mình unzip file `dump.zip`, thì nhận được 1 file `hello.txt` chứa nội dung
+
+```
+There's more to it than meets the eye...
+```
+Có vẻ như là ngoài file `hello.txt` thì còn các file khác đang được giấu đi và có thể nó sẽ chứa flag. Mình thử dùng `binwalk` file `dump.zip` thì được kết quả
+<details><summary>Click để xem full</summary>
 <p>
-
-#### yes, even hidden code blocks!
-
+#### Hello
 ```python
 DECIMAL       HEXADECIMAL     DESCRIPTION
 --------------------------------------------------------------------------------
@@ -696,6 +707,31 @@ DECIMAL       HEXADECIMAL     DESCRIPTION
 61043         0xEE73          Zip archive data, v0.0 compressed size: 1, uncompressed size: 1, name: flag18
 61572         0xF084          End of Zip archive, footer length: 22
 ```
-
 </p>
 </details>
+Nhận xét : Các file có chữ flag được đánh số từ 0 đến 18. Có thể flag sẽ ở 1 trong những file này hoặc sẽ được ghép từ các file này<br/>
+
+```text
+r/r 18291:      down-at-the-bottom.txt
+```
+
+It took me a while to figure out how to use the `icat` command but eventually, `icat -o 2048 dds2-alpine.flag.img 18291` worked:
+
+```text
+   _     _     _     _     _     _     _     _     _     _     _     _     _
+  / \   / \   / \   / \   / \   / \   / \   / \   / \   / \   / \   / \   / \
+ ( p ) ( i ) ( c ) ( o ) ( C ) ( T ) ( F ) ( { ) ( f ) ( 0 ) ( r ) ( 3 ) ( n )
+  \_/   \_/   \_/   \_/   \_/   \_/   \_/   \_/   \_/   \_/   \_/   \_/   \_/
+   _     _     _     _     _     _     _     _     _     _     _     _     _
+  / \   / \   / \   / \   / \   / \   / \   / \   / \   / \   / \   / \   / \
+ ( s ) ( 1 ) ( c ) ( 4 ) ( t ) ( 0 ) ( r ) ( _ ) ( n ) ( 0 ) ( v ) ( 1 ) ( c )
+  \_/   \_/   \_/   \_/   \_/   \_/   \_/   \_/   \_/   \_/   \_/   \_/   \_/
+   _     _     _     _     _     _     _     _     _     _     _
+  / \   / \   / \   / \   / \   / \   / \   / \   / \   / \   / \
+ ( 3 ) ( _ ) ( 6 ) ( 9 ) ( a ) ( b ) ( 1 ) ( d ) ( c ) ( 8 ) ( } )
+  \_/   \_/   \_/   \_/   \_/   \_/   \_/   \_/   \_/   \_/   \_/
+  ```
+
+## Flag
+
+picoCTF{f0r3ns1c4t0r_n0v1c3_69ab1dc8}
