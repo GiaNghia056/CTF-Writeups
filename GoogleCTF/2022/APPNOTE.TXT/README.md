@@ -16,7 +16,7 @@ Có vẻ như là ngoài file `hello.txt` thì còn các file khác đang đư�
 
 <details>
    <summary>Xem đầy đủ tại đây</summary>
-```
+```text
 DECIMAL       HEXADECIMAL     DESCRIPTION
 --------------------------------------------------------------------------------
 0             0x0             Zip archive data, v0.0 compressed size: 41, uncompressed size: 41, name: hello.txt
