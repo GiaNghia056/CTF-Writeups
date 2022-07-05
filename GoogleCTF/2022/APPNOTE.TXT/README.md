@@ -711,15 +711,23 @@ DECIMAL       HEXADECIMAL     DESCRIPTION
   
 </p>
 </details>
-Nhận xét : Các file có chữ flag được đánh số từ 0 đến 18. Có thể flag sẽ ở 1 trong những file này hoặc sẽ được ghép từ các file này<br/>
+Nhận xét : File `dump.zip` có 2 file `.txt` là `hello.txt` và các file có chữ `flag` được đánh số từ 0 đến 18. Có thể flag sẽ ở 1 trong những file này hoặc sẽ được ghép từ các file này<br/>
 
 Mình mở file `dump.zip` dưới dạng hex qua [HxD](https://mh-nexus.de/en/hxd/), nhận thấy ở các file flag có chứa một kí tự ASCII. Bằng cách viết một đoạn code ngắn thì mình đã tập hợp các kí tự ở mỗi file và nhận được nội dung sau. 
 ```shell
 abcdefghijklmnopqrstuvwxyz{CTF0137}_abcdefghijklmnopqrstuvwxyz{CTF0137}_abcdefghijklmnopqrstuvwxyz{CTF0137}_abcdefghijklmnopqrstuvwxyz{CTF0137}_abcdefghijklmnopqrstuvwxyz{CTF0137}_abcdefghijklmnopqrstuvwxyz{CTF0137}_abcdefghijklmnopqrstuvwxyz{CTF0137}_abcdefghijklmnopqrstuvwxyz{CTF0137}_abcdefghijklmnopqrstuvwxyz{CTF0137}_abcdefghijklmnopqrstuvwxyz{CTF0137}_abcdefghijklmnopqrstuvwxyz{CTF0137}_abcdefghijklmnopqrstuvwxyz{CTF0137}_abcdefghijklmnopqrstuvwxyz{CTF0137}_abcdefghijklmnopqrstuvwxyz{CTF0137}_abcdefghijklmnopqrstuvwxyz{CTF0137}_abcdefghijklmnopqrstuvwxyz{CTF0137}_abcdefghijklmnopqrstuvwxyz{CTF0137}_abcdefghijklmnopqrstuvwxyz{CTF0137}_abcdefghijklmnopqrstuvwxyz{CTF0137}_
 ```
-Sau đó ở phần cuối thì mình thấy có 21 `END OF CENTRAL DIRECTORY` của file zip (mời bạn đọc thêm ở [đây](https://i.imgur.com/BXuOFqT.jpg) và [APPNOTE.TXT](https://pkware.cachefly.net/webdocs/casestudies/APPNOTE.TXT)) nghĩa là thật sự sẽ chỉ có 21 file zip có đầy đủ cấu trúc, trừ đi 2 file `hello.txt` và `hi.txt` thì còn 19 file nghĩa là trong các file có tên bắt đầu bằng `flag` thì sẽ có 19 file là chứa các chữ cái để ghép thành flag hoàn chỉnh.<br/>
+Sau đó ở phần cuối thì mình thấy có 21 `END OF CENTRAL DIRECTORY` của file zip (mời bạn đọc thêm ở [đây](https://i.imgur.com/BXuOFqT.jpg) và [APPNOTE.TXT](https://pkware.cachefly.net/webdocs/casestudies/APPNOTE.TXT)) nghĩa là thật sự sẽ chỉ có 21 file zip có đầy đủ cấu trúc, trừ đi 2 phần của file `hello.txt` và `hi.txt` thì còn 19 file nghĩa là trong các file có tên bắt đầu bằng `flag` thì sẽ có 19 file là chứa các chữ cái để ghép thành flag hoàn chỉnh.<br/>
 
 Để ý ở trong mỗi `END OF CENTRAL DIRECTORY` sẽ có địa chỉ offset bắt đầu của `CENTRAL DIRECTORY`, từ đó có thể xác định được file có chứa các kí tự của flag.<br/>
 ![EOCD](https://user-images.githubusercontent.com/88471003/177375280-5fcc28c6-efc9-4418-a390-34caee5e6529.png)
 
-Ví dụ:
+_**Ví dụ:**_<br/>
+Bỏ qua `END OF CENTRAL DIRECTORY` đầu tiên vì nó chỉ đến file `hi.txt`, đến với `END OF CENTRAL DIRECTORY`, nó cho biết `CENTRAL DIRECTORY` ở offset `0x0A88`, đến offset này thì ta thấy file chứa kí tự 'C'
+![Ex1](https://user-images.githubusercontent.com/88471003/177376892-709dd88a-65a8-4d52-8193-6517dd729350.png)
+![Ex1-1](https://user-images.githubusercontent.com/88471003/177377102-ba92be21-7263-4d13-afd1-505bfea01782.png)
+Cứ như vậy tìm từng kí tự cho đến `END OF CENTRAL DIRECTORY` cuối cùng (tất nhiên là ko tính phần của file `hello.txt`).
+## Flag
+CTF{p0s7m0d3rn_z1p}
+
+
