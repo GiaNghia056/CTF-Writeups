@@ -713,4 +713,7 @@ DECIMAL       HEXADECIMAL     DESCRIPTION
 </details>
 Nhận xét : Các file có chữ flag được đánh số từ 0 đến 18. Có thể flag sẽ ở 1 trong những file này hoặc sẽ được ghép từ các file này<br/>
 
-Mình mở file `dump.zip` dưới dạng hex qua [HxD](https://mh-nexus.de/en/hxd/)
+Mình mở file `dump.zip` dưới dạng hex qua [HxD](https://mh-nexus.de/en/hxd/), nhận thấy ở các file flag có chứa một kí tự ASCII. Bằng cách viết một đoạn code ngắn thì mình đã tập hợp các kí tự ở mỗi file và nhận được nội dung sau. 
+```shell
+abcdefghijklmnopqrstuvwxyz{CTF0137}_abcdefghijklmnopqrstuvwxyz{CTF0137}_abcdefghijklmnopqrstuvwxyz{CTF0137}_abcdefghijklmnopqrstuvwxyz{CTF0137}_abcdefghijklmnopqrstuvwxyz{CTF0137}_abcdefghijklmnopqrstuvwxyz{CTF0137}_abcdefghijklmnopqrstuvwxyz{CTF0137}_abcdefghijklmnopqrstuvwxyz{CTF0137}_abcdefghijklmnopqrstuvwxyz{CTF0137}_abcdefghijklmnopqrstuvwxyz{CTF0137}_abcdefghijklmnopqrstuvwxyz{CTF0137}_abcdefghijklmnopqrstuvwxyz{CTF0137}_abcdefghijklmnopqrstuvwxyz{CTF0137}_abcdefghijklmnopqrstuvwxyz{CTF0137}_abcdefghijklmnopqrstuvwxyz{CTF0137}_abcdefghijklmnopqrstuvwxyz{CTF0137}_abcdefghijklmnopqrstuvwxyz{CTF0137}_abcdefghijklmnopqrstuvwxyz{CTF0137}_abcdefghijklmnopqrstuvwxyz{CTF0137}_
+```
