@@ -725,6 +725,7 @@ Sau đó ở phần cuối thì mình thấy có 21 `END OF CENTRAL DIRECTORY` c
 _**Ví dụ:**_<br/>
 Bỏ qua `END OF CENTRAL DIRECTORY` đầu tiên vì nó chỉ đến file `hi.txt`, đến với `END OF CENTRAL DIRECTORY`, nó cho biết `CENTRAL DIRECTORY` ở offset `0x0A88`, đến offset này thì ta thấy file chứa kí tự 'C'
 ![Ex1](https://user-images.githubusercontent.com/88471003/177376892-709dd88a-65a8-4d52-8193-6517dd729350.png)
+
 ![Ex1-1](https://user-images.githubusercontent.com/88471003/177377102-ba92be21-7263-4d13-afd1-505bfea01782.png)
 Cứ như vậy tìm từng kí tự cho đến `END OF CENTRAL DIRECTORY` cuối cùng (tất nhiên là ko tính phần của file `hello.txt`).
 ## Flag
