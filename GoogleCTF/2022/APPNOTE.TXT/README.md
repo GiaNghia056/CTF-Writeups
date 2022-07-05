@@ -727,6 +727,7 @@ Bỏ qua `END OF CENTRAL DIRECTORY` đầu tiên vì nó chỉ đến file `hi.t
 ![Ex1](https://user-images.githubusercontent.com/88471003/177376892-709dd88a-65a8-4d52-8193-6517dd729350.png)
 
 ![Ex1-1](https://user-images.githubusercontent.com/88471003/177377102-ba92be21-7263-4d13-afd1-505bfea01782.png)
+
 Cứ như vậy tìm từng kí tự cho đến `END OF CENTRAL DIRECTORY` cuối cùng (tất nhiên là ko tính phần của file `hello.txt`).
 ## Flag
 CTF{p0s7m0d3rn_z1p}
