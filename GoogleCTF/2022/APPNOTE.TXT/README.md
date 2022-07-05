@@ -5,15 +5,10 @@
 Every single archive manager unpacks this to a different file...<br/>
 [&darr;Attachment](https://storage.googleapis.com/gctf-2022-attachments-project/2551253642bde3066e55c9cc8e9b0b4aa77feadc00c81032da778e6f7c89907135dfc2611fd8617204720dbfadb31429ae11f6ecd202887f4ce99f2f53a3c5e8)
 
-## Hints
-
-1. The sleuthkit has some great tools for this challenge as well.
-2. Sleuthkit docs here are so helpful: [TSK Tool Overview](http://wiki.sleuthkit.org/index.php?title=TSK_Tool_Overview)
-3. This disk can also be booted with qemu!
-
 ## Approach
 
-First the file is zipped. Unzip it with `gzip -d dds2-alpine.flag.img`
+Đầu tiên, unzip file 'dump.zip', thì nhận được 1 file 'hello.txt' chứa nội dung
+'''There's more to it than meets the eye...'''
 
 After the file is unzipped, the [image file](https://srv-store1.gofile.io/download/OqFIZV/cdbb01f6ece33855c5e24d3ca48581ed/dds2-alpine.flag.img) should be visible.
 
