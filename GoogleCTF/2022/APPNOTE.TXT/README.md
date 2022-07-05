@@ -14,7 +14,7 @@ There's more to it than meets the eye...
 ```
 Có vẻ như là ngoài file `hello.txt` thì còn các file khác đang được giấu đi và có thể nó sẽ chứa flag. Mình thử dùng `binwalk` file `dump.zip` thì được kết quả
 
-```r
+```{r, max.height = '100px'}
 DECIMAL       HEXADECIMAL     DESCRIPTION
 --------------------------------------------------------------------------------
 0             0x0             Zip archive data, v0.0 compressed size: 41, uncompressed size: 41, name: hello.txt
