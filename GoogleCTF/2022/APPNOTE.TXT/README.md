@@ -712,3 +712,5 @@ DECIMAL       HEXADECIMAL     DESCRIPTION
 </p>
 </details>
 Nhận xét : Các file có chữ flag được đánh số từ 0 đến 18. Có thể flag sẽ ở 1 trong những file này hoặc sẽ được ghép từ các file này<br/>
+
+Mình mở file `dump.zip` dưới dạng hex qua [HxD](https://mh-nexus.de/en/hxd/)
