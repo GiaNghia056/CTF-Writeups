@@ -14,8 +14,9 @@ There's more to it than meets the eye...
 ```
 Có vẻ như là ngoài file `hello.txt` thì còn các file khác đang được giấu đi và có thể nó sẽ chứa flag. Mình thử dùng `binwalk` file `dump.zip` thì được kết quả
 <details><summary>Click để xem full</summary>
-   <p>
-      ```python
+<p>
+###Helllo
+```python
 DECIMAL       HEXADECIMAL     DESCRIPTION
 --------------------------------------------------------------------------------
 0             0x0             Zip archive data, v0.0 compressed size: 41, uncompressed size: 41, name: hello.txt
@@ -706,7 +707,7 @@ DECIMAL       HEXADECIMAL     DESCRIPTION
 61043         0xEE73          Zip archive data, v0.0 compressed size: 1, uncompressed size: 1, name: flag18
 61572         0xF084          End of Zip archive, footer length: 22
 ```
-   </p>
+</p>
 </details>
 Nhận xét : Các file có chữ flag được đánh số từ 0 đến 18. Có thể flag sẽ ở 1 trong những file này hoặc sẽ được ghép từ các file này<br/>
 
