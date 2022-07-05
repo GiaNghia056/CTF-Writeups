@@ -17,8 +17,6 @@ Có vẻ như là ngoài file `hello.txt` thì còn các file khác đang đư�
   
 <p>
   
-#### Hello
-  
 ```python
 DECIMAL       HEXADECIMAL     DESCRIPTION
 --------------------------------------------------------------------------------
