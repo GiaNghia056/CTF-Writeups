@@ -11,7 +11,7 @@ I found something weird last night, but I can't open the [report](https://asisct
 - The `wormrep.klr.enc1` file is a report files containing the results of scan tasks of [Kaspersky Virus Removal Tool](https://support.kaspersky.com/kvrt2020). I downloaded the tool I try to read the report file but I can't import the file to read it.
 - So I try a different way. After scanning, `KVRT` create some report files in `C:\KVRT2020_Data\Report` folder. I replace data of one of the report files with the data of `wormrep.klr.enc1`. I did it with [HxD Editor](https://mh-nexus.de/en/hxd/)
 ![](HxD-1.png)
-![](HxD.png)
+![](HxD-2.png)
 - Just open `KVRT.exe` and read the data-replaced report. And we get the flag.
 ![](Report.png)
 
