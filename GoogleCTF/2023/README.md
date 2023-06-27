@@ -15,6 +15,7 @@ Challenge just give us an all-white JPG file. With experience many times for thi
 > You can change JPEG picture size by modifying data after `FF C0 00 11 08` bytes in hexformat of the file.![Alt text](image.png)
 
 ![Alt text](PAPAPAPA_example.jpg)
+
 I saw something like ASCII character in this picture so I just keep changing size til I got the flag. It worked with 528x768
 ![Alt text](PAPAPAPA_flag.jpg)
 
