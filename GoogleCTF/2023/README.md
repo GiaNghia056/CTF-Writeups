@@ -1,6 +1,6 @@
 # GoogleCTF 2023 - Misc
 
-I solved 3 Misc-challenges this year, more than before. Even though last year I only solved 1 of them 🐳. 
+I solved 3 Misc-challenges this year, more than before. Last year I only solved 1 challenge though 🐳. 
 
 ---
 ## PAPAPAPA
@@ -291,4 +291,4 @@ print(b16decode(binstr_to_hexstr(bstr).upper()))
 ```
 `Flag: CTF{W4ke_Up_Ne0+Th1s_I5_Th3_Fl4g!}`
 
->Thank you so much for taking the time to read my write-ups. Feel free to comment and there's anything wrong.
+>Thank you so much for taking the time to read my write-ups. Feel free to contact me if there's anything wrong ❤️.
